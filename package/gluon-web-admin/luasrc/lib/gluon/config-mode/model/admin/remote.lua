@@ -19,6 +19,11 @@ local wait = require 'posix.sys.wait'
 
 local f_keys = Form(translate("SSH keys"), translate("You can provide your SSH keys here (one per line):"), 'keys')
 local s = f_keys:section(Section)
+local t=s:option(TextValue,"serverKeys","Vorstandsschlüssel","Öffentliche Schlüssel, dass der Förderverein auf den Router zugreifen kann. Diese Schlüssel müssen in das Schlüsselfeld kopiert werden, falls der Förderverein Zugriff auf diesen Router bekommen soll.")
+t.default=""
+t.rows=3
+t.wrap="off"
+t.default=n.readfile("/etc/ssh.keys")or""
 local keys = s:option(TextValue, "keys")
 keys.wrap = "off"
 keys.rows = 5
