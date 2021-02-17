@@ -64,7 +64,7 @@ return function(form, uci)
 		map:depends(set_location, true)
 	end
 
-	o = s:option(Value, "latitude", pkg_i18n.translate("Latitude"), pkg_i18n.translatef("e.g. %s", "53.873621"))
+	o = s:option(Value, "latitude", pkg_i18n.translate("Latitude"), pkg_i18n.translatef("e.g. %s", "51.457383011"))
 	o.default = own_latitude
 	o:depends(set_location, true)
 	o.datatype = "float"
@@ -75,7 +75,7 @@ return function(form, uci)
 		map.lat = o
 	end
 
-	o = s:option(Value, "longitude", pkg_i18n.translate("Longitude"), pkg_i18n.translatef("e.g. %s", "10.689901"))
+	o = s:option(Value, "longitude", pkg_i18n.translate("Longitude"), pkg_i18n.translatef("e.g. %s", "11.958513558"))
 	o.default = own_longitude
 	o:depends(set_location, true)
 	o.datatype = "float"
