@@ -21,6 +21,12 @@ uci:section('network', 'interface', 'client', {
 	ra_holdoff = 30,
 })
 
+uci:section('network', 'interface', 'client_dhcp', {
+      ifname = 'br-client',
+      proto = 'dhcp',
+      metric = '999',
+})
+
 uci:save('network')
 
 uci:section('firewall', 'zone', 'drop', {
